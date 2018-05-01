@@ -1,5 +1,5 @@
 import { Component, Prop, State } from "@stencil/core";
-import { ModalController, ModalOptions } from '@ionic/core';
+import { ModalOptions } from '@ionic/core';
 
 @Component({
   tag: "app-home",
@@ -11,7 +11,7 @@ export class AppHome {
   @Prop() firebase;
   @Prop() user;
   @Prop({ connect: 'ion-modal-controller' })
-  modalCtrl: ModalController;
+  modalCtrl: HTMLIonModalControllerElement;
   @State() phones: Array<phone> = [];
 
   componentDidLoad() {
@@ -41,7 +41,7 @@ export class AppHome {
     const modalOptions: ModalOptions = {
       enableBackdropDismiss: false,
       component: 'app-profile',
-      data: {
+      componentProps: {
         // service: this.service
       }
     };

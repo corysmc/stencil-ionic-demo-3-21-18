@@ -3,6 +3,9 @@
  * It contains typing information for all components that exist in this project
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
+
+import '@stencil/core';
+
 declare global {
   namespace JSX {
     interface Element {}
@@ -23,192 +26,212 @@ declare global {
 import 'ionicons';
 import '@ionic/core';
 
-
 import {
-  AppHome as AppHome
-} from './components/app-home/app-home';
+  EventEmitter,
+} from '@stencil/core';
 
 declare global {
-  interface HTMLAppHomeElement extends AppHome, HTMLStencilElement {
+
+  namespace StencilComponents {
+    interface AppHome {
+      'firebase': any;
+      'user': any;
+    }
   }
+
+  interface HTMLAppHomeElement extends StencilComponents.AppHome, HTMLStencilElement {}
+
   var HTMLAppHomeElement: {
     prototype: HTMLAppHomeElement;
     new (): HTMLAppHomeElement;
   };
   interface HTMLElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
+    'app-home': HTMLAppHomeElement;
   }
   interface ElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
+    'app-home': HTMLAppHomeElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-home": JSXElements.AppHomeAttributes;
+      'app-home': JSXElements.AppHomeAttributes;
     }
   }
   namespace JSXElements {
     export interface AppHomeAttributes extends HTMLAttributes {
-      firebase?: any;
-      user?: any;
-      
+      'firebase'?: any;
+      'user'?: any;
     }
   }
 }
 
 
-import {
-  AppLogin as AppLogin
-} from './components/app-login/app-login';
-
 declare global {
-  interface HTMLAppLoginElement extends AppLogin, HTMLStencilElement {
+
+  namespace StencilComponents {
+    interface AppLogin {
+      'firebase': any;
+    }
   }
+
+  interface HTMLAppLoginElement extends StencilComponents.AppLogin, HTMLStencilElement {}
+
   var HTMLAppLoginElement: {
     prototype: HTMLAppLoginElement;
     new (): HTMLAppLoginElement;
   };
   interface HTMLElementTagNameMap {
-    "app-login": HTMLAppLoginElement;
+    'app-login': HTMLAppLoginElement;
   }
   interface ElementTagNameMap {
-    "app-login": HTMLAppLoginElement;
+    'app-login': HTMLAppLoginElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-login": JSXElements.AppLoginAttributes;
+      'app-login': JSXElements.AppLoginAttributes;
     }
   }
   namespace JSXElements {
     export interface AppLoginAttributes extends HTMLAttributes {
-      firebase?: any;
-      
+      'firebase'?: any;
     }
   }
 }
 
 
-import {
-  AppProfile as AppProfile
-} from './components/app-profile/app-profile';
-
 declare global {
-  interface HTMLAppProfileElement extends AppProfile, HTMLStencilElement {
+
+  namespace StencilComponents {
+    interface AppProfile {
+      'name': any;
+    }
   }
+
+  interface HTMLAppProfileElement extends StencilComponents.AppProfile, HTMLStencilElement {}
+
   var HTMLAppProfileElement: {
     prototype: HTMLAppProfileElement;
     new (): HTMLAppProfileElement;
   };
   interface HTMLElementTagNameMap {
-    "app-profile": HTMLAppProfileElement;
+    'app-profile': HTMLAppProfileElement;
   }
   interface ElementTagNameMap {
-    "app-profile": HTMLAppProfileElement;
+    'app-profile': HTMLAppProfileElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-profile": JSXElements.AppProfileAttributes;
+      'app-profile': JSXElements.AppProfileAttributes;
     }
   }
   namespace JSXElements {
     export interface AppProfileAttributes extends HTMLAttributes {
-      name?: any;
-      
+      'name'?: any;
     }
   }
 }
 
 
-import {
-  LazyImg as LazyImg
-} from './components/lazy-img/lazy-img';
-
 declare global {
-  interface HTMLLazyImgElement extends LazyImg, HTMLStencilElement {
+
+  namespace StencilComponents {
+    interface LazyImg {
+      'alt': string;
+      'src': string;
+    }
   }
+
+  interface HTMLLazyImgElement extends StencilComponents.LazyImg, HTMLStencilElement {}
+
   var HTMLLazyImgElement: {
     prototype: HTMLLazyImgElement;
     new (): HTMLLazyImgElement;
   };
   interface HTMLElementTagNameMap {
-    "lazy-img": HTMLLazyImgElement;
+    'lazy-img': HTMLLazyImgElement;
   }
   interface ElementTagNameMap {
-    "lazy-img": HTMLLazyImgElement;
+    'lazy-img': HTMLLazyImgElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "lazy-img": JSXElements.LazyImgAttributes;
+      'lazy-img': JSXElements.LazyImgAttributes;
     }
   }
   namespace JSXElements {
     export interface LazyImgAttributes extends HTMLAttributes {
-      alt?: string;
-      src?: string;
-      onLazyImgloaded?: (event: CustomEvent<HTMLImageElement>) => void;
+      'alt'?: string;
+      'onLazyImgloaded'?: (event: CustomEvent<HTMLImageElement>) => void;
+      'src'?: string;
     }
   }
 }
 
 
-import {
-  MyApp as MyApp
-} from './components/my-app/my-app';
-
 declare global {
-  interface HTMLMyAppElement extends MyApp, HTMLStencilElement {
+
+  namespace StencilComponents {
+    interface MyApp {
+
+    }
   }
+
+  interface HTMLMyAppElement extends StencilComponents.MyApp, HTMLStencilElement {}
+
   var HTMLMyAppElement: {
     prototype: HTMLMyAppElement;
     new (): HTMLMyAppElement;
   };
   interface HTMLElementTagNameMap {
-    "my-app": HTMLMyAppElement;
+    'my-app': HTMLMyAppElement;
   }
   interface ElementTagNameMap {
-    "my-app": HTMLMyAppElement;
+    'my-app': HTMLMyAppElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-app": JSXElements.MyAppAttributes;
+      'my-app': JSXElements.MyAppAttributes;
     }
   }
   namespace JSXElements {
     export interface MyAppAttributes extends HTMLAttributes {
-      
-      
+
     }
   }
 }
 
 
-import {
-  QueryPage as QueryPage
-} from './components/query-page/query-page';
-
 declare global {
-  interface HTMLQueryPageElement extends QueryPage, HTMLStencilElement {
+
+  namespace StencilComponents {
+    interface QueryPage {
+      'firebase': any;
+      'query': string;
+      'user': any;
+    }
   }
+
+  interface HTMLQueryPageElement extends StencilComponents.QueryPage, HTMLStencilElement {}
+
   var HTMLQueryPageElement: {
     prototype: HTMLQueryPageElement;
     new (): HTMLQueryPageElement;
   };
   interface HTMLElementTagNameMap {
-    "query-page": HTMLQueryPageElement;
+    'query-page': HTMLQueryPageElement;
   }
   interface ElementTagNameMap {
-    "query-page": HTMLQueryPageElement;
+    'query-page': HTMLQueryPageElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "query-page": JSXElements.QueryPageAttributes;
+      'query-page': JSXElements.QueryPageAttributes;
     }
   }
   namespace JSXElements {
     export interface QueryPageAttributes extends HTMLAttributes {
-      firebase?: any;
-      query?: string;
-      user?: any;
-      
+      'firebase'?: any;
+      'query'?: string;
+      'user'?: any;
     }
   }
 }

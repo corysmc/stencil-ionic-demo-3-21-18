@@ -5,7 +5,6 @@ import "@firebase/firestore";
 import "@ionic/core";
 import "@stencil/core";
 import { Component, Prop, State, Listen } from "@stencil/core";
-import { ToastController } from "@ionic/core";
 
 @Component({
   tag: "my-app",
@@ -13,7 +12,7 @@ import { ToastController } from "@ionic/core";
 })
 export class MyApp {
   @Prop({ connect: "ion-toast-controller" })
-  toastCtrl: ToastController;
+  toastCtrl: HTMLIonToastControllerElement;
   @State() loading: boolean = true;
   @State() user;
 
